@@ -127,7 +127,7 @@ stories:
       - time
       - date
   - action: utter_acknowledge_date_and_time
-  - intent: greet
+  - action: action_pause
   - action: utter_ask_dept
   - intent: tell_dept
     entities: 
@@ -175,7 +175,7 @@ stories:
       - time
       - date
   - action: utter_acknowledge_date_and_time
-  - intent: greet
+  - action: action_pause
   - action: utter_ask_dept
   - intent: tell_dept
     entities: 
