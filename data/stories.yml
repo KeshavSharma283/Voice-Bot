@@ -1,0 +1,212 @@
+version: "3.1"
+
+stories:
+
+- story: Reporting sexual harassment part 3
+  steps:
+  - intent: greet
+  - action: utter_ask_how_to_help
+  - intent: sexual_harassment_complaint_3
+  - action: utter_have_you_asked_violater_to_stop
+  - intent: affirm
+  - action: utter_reply_sexual_harassment_complaint_3_1
+  - action: action_pause
+  - action: utter_reply_sexual_harassment_complaint_3_2
+  - action: action_pause
+  - action: utter_reply_sexual_harassment_complaint_3_3
+  - action: action_pause
+  - action: utter_ask_name_if_possible
+  - or:
+    - intent: tell_name
+      entities:
+      - name
+    - intent: keep_anonymous
+    - intent: deny
+  - action: action_name_given_or_not
+  - action: action_pause
+  - action: utter_ask_violater_name_if_known
+  - or:
+    - intent: tell_violater_name
+      entities:
+      - violaterName
+    - intent: violater_name_not_known
+  - action: action_violater_name_given_or_not
+  - action: action_pause
+  - action: utter_done_the_right_thing
+  - action: action_pause
+  - action: utter_promise_take_actions
+  - intent: thanks
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+
+- story: Failed Reporting sexual harassment part 3
+  steps:
+  - intent: greet
+  - action: utter_ask_how_to_help
+  - intent: sexual_harassment_complaint_3
+  - action: utter_have_you_asked_violater_to_stop
+  - intent: deny
+  - action: utter_suggest_ask_to_stop
+  - intent: thanks
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+# email from a known collegue - explicit images , videos , messages
+- story: Reporting sexual harassment part new
+  steps:
+  - intent: greet
+  - action: utter_ask_how_to_help
+  - intent: sexual_harassment_complaint_new
+  - action: utter_have_you_asked_violater_to_stop
+  - intent: affirm
+  - action: utter_reply_sexual_harassment_complaint_new_1
+  - action: action_pause
+  - action: utter_reply_sexual_harassment_complaint_new_2
+  - action: action_pause
+  - action: utter_reply_sexual_harassment_complaint_new_3
+  - action: action_pause
+  - action: utter_ask_name_if_possible
+  - or:
+    - intent: tell_name
+      entities:
+      - name
+    - intent: keep_anonymous
+    - intent: deny
+  - action: action_name_given_or_not
+  - action: action_pause
+  - action: utter_ask_violater_name_if_known
+  - or:
+    - intent: tell_violater_name
+      entities:
+      - violaterName
+    - intent: violater_name_not_known
+  - action: action_violater_name_given_or_not
+  - action: action_pause
+  - action: utter_done_the_right_thing
+  - action: action_pause
+  - action: utter_promise_take_actions
+  - intent: thanks
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+
+- story: Reporting cyber security 4
+  steps:
+  - intent: greet
+  - action: utter_ask_how_to_help
+  - intent: cyber_security_complaint_4
+  - action: utter_reply_cyber_security_complaint_4_1
+  - action: action_pause
+  - action: utter_reply_cyber_security_complaint_4_2
+  - action: action_pause
+  - action: utter_reply_cyber_security_complaint_4_3
+  - action: action_pause
+  - action: utter_answer_basic_questions
+  - action: action_pause
+  - action: utter_ask_name
+  - intent: tell_name
+    entities:
+    - name
+  - action: utter_acknowledge_name
+  - action: utter_ask_employee_id
+  - intent: provide_employee_id
+    entities:
+    - employeeId
+  - action: action_validate_employee_id
+  - action: action_pause
+  - action: utter_ask_date_and_time
+  - intent: tell_date_and_time
+    entities:
+      - time
+      - date
+  - action: utter_acknowledge_date_and_time
+  - intent: greet
+  - action: utter_ask_dept
+  - intent: tell_dept
+    entities: 
+      - dept
+  - action: utter_acknowledge_dept
+  - action: utter_wait_for_further_instructions
+  - action: action_pause
+  - action: utter_dont_use_computer
+  - action: action_pause
+  - action: utter_informed_asap
+  - intent: thanks
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- story: Reporting cyber security 1
+
+  steps:
+  - intent: greet
+  - action: utter_ask_how_to_help
+  - intent: cyber_security_complaint_1
+  - action: utter_reply_cyber_security_complaint_1_1
+  - action: action_pause
+  - action: utter_reply_cyber_security_complaint_1_2
+  - action: action_pause
+  - action: utter_reply_cyber_security_complaint_1_3
+  - action: action_pause
+  - action: utter_answer_basic_questions
+  - action: action_pause
+  - action: utter_ask_name
+  - intent: tell_name
+    entities:
+    - name
+  - action: utter_acknowledge_name
+  - action: utter_ask_employee_id
+  - intent: provide_employee_id
+    entities:
+    - employeeId
+  - action: action_validate_employee_id
+  - action: action_pause
+  - action: utter_ask_date_and_time
+  - intent: tell_date_and_time
+    entities:
+      - time
+      - date
+  - action: utter_acknowledge_date_and_time
+  - intent: greet
+  - action: utter_ask_dept
+  - intent: tell_dept
+    entities: 
+      - dept
+  - action: utter_acknowledge_dept
+  - action: utter_wait_for_further_instructions
+  - action: action_pause
+  - action: utter_dont_use_computer
+  - action: action_pause
+  - action: utter_informed_asap
+  - intent: thanks
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+  
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_ask_dept
+#   - intent: tell_dept
+#     entities:
+#     - dept: Finance
+#   - slot_was_set:
+#     - dept: Finance
+#   - action: utter_wait_for_further_instructions
+#   - action: action_pause
+#   - action: utter_dont_use_computer
+#   - action: action_pause
+#   - action: utter_informed_asap
+#   - intent: thanks
+#   - action: utter_welcome
+#   - intent: goodbye
+#   - action: utter_goodbye

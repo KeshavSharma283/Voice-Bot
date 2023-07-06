@@ -1,0 +1,10 @@
+[
+  {
+    "name": "employeeId",
+    "pattern": "[0-9]{4}[A][0-9][P][S][0-9]{4}[PGH]"
+  },
+  {
+    "name": "dept",
+    "pattern": "(\\bFinance\\b|\\bPublic\\ Relations\\b|\\bLogistics\\b|\\bR\\&D\\b|\\bSales\\b|\\bMarketing\\b)"
+  }
+]

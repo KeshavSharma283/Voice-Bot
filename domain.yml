@@ -1,0 +1,174 @@
+version: '3.1'
+actions:
+- action_pause
+- utter_wait_for_further_instructions
+- utter_dont_use_computer
+- utter_goodbye
+- utter_ask_dept
+- utter_welcome
+- utter_informed_asap
+- action_name_given_or_not
+- action_violater_name_given_or_not
+- action_ask_employee_id
+- action_validate_employee_id
+- utter_chitchat
+slots:
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name
+  violaterName:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: violaterName
+  employeeId:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: employeeId
+  dept:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: dept
+  date:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: date
+  time:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: time
+entities:
+- PERSON
+- GPE
+- ORG
+- dept
+- name
+- violaterName
+- employeeId
+- date
+- time
+intents:
+- affirm
+- bot_challenge
+- chitchat:
+    used_entities:
+    - date
+    - dept
+    - employeeId
+    - name
+    - time
+    - violaterName
+    is_retrieval_intent: true
+- chitchat/ask_life
+- chitchat/ask_weather
+- cyber_security_complaint_4
+- cyber_security_complaint_1
+- deny
+- goodbye
+- greet
+- keep_anonymous
+- mood_great
+- mood_unhappy
+- out-of-scope
+- provide_employee_id
+- sexual_harassment_complaint_3
+- sexual_harassment_complaint_new
+- tell_date_and_time
+- tell_dept
+- tell_name
+- tell_violater_name
+- thanks
+- violater_name_not_known
+responses:
+  utter_chitchat/ask_life:
+  - text: Life is going goood.
+  utter_chitchat/ask_weather:
+  - text: Oh , the weather is nice rn.
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_reply_sexual_harassment_complaint_3_1:
+  - text: Unwanted physical contact and invading personal space are serious violations of our company's sexual harassment policy.
+  utter_reply_sexual_harassment_complaint_3_2:
+  - text: Your safety and comfort are paramount. We encourage you to firmly and clearly communicate your boundaries to the individual, expressing that their behaviour is unwelcome.
+  utter_reply_sexual_harassment_complaint_3_3:
+  - text: Document any incidents, including dates, times, and any witnesses. Report the incidents to your supervisor or the HR department immediately so that appropriate action can be taken.
+  utter_ask_how_to_help:
+  - text: Hi There . How can I help you?
+  utter_ask_name:
+  - text: Please provide your name.
+  utter_ask_name_if_possible:
+  - text: Would you like to give your name?
+  utter_ask_violater_name_if_known:
+  - text: Do you know the violater's name?
+  utter_welcome:
+  - text: Welcome. It's my duty to serve you
+  utter_acknowledge_name:
+  - text: Thank You {name} , your name has been recorded.
+  utter_acknowledge_date_and_time:
+  - text: "The date has been recorded as: {date}. The time has been recorded as {time}."
+  utter_acknowledge_dept:
+  - text: "The department has been as: {dept}"
+  utter_promise_take_actions:
+  - text: I promise you that necessary action will be taken. Don't worry
+  utter_done_the_right_thing:
+  - text: You have done the right thing by coming forward.
+  utter_out_of_scope:
+  - text: Sorry , I didn't get what you said. Please rephrase.
+  utter_have_you_asked_violater_to_stop:
+  - text: Have you asked the violater to stop as you are uncomfortable with their actions?
+  utter_suggest_ask_to_stop:
+  - text: I suggest you to make it clear to the violater that you are uncomfortable with their actions. If they still don't stop , then please come again.
+  utter_reply_sexual_harassment_complaint_new_1:
+  - text: Finding an anonymous email with explicit and derogatory content is a serious matter.
+  utter_reply_sexual_harassment_complaint_new_2:
+  - text: We advise you to preserve the note/ save the email as evidence and report the incident to your supervisor or the HR department immediately.
+  utter_reply_sexual_harassment_complaint_new_3:
+  - text: The company will initiate an investigation to identify the source of the email
+  utter_ask_employee_id:
+  - text: Please provide your employee ID.
+  utter_employee_id:
+  - text: Thank you for providing your employee ID.
+  utter_reply_cyber_security_complaint_4_1:
+  - text: Clicking on a suspicious link can expose your computer to malware or other cybersecurity threats.
+  utter_reply_cyber_security_complaint_4_2:
+  - text: Immediately disconnect your computer from the network and notify the IT department or the designated cybersecurity contact. They will guide you through the necessary steps to isolate and assess the impact of the incident.
+  utter_reply_cyber_security_complaint_4_3:
+  - text: It is important not to attempt to resolve the issue independently to prevent further damage.
+  utter_reply_cyber_security_complaint_1_1:
+  - text: Receiving an email requesting sensitive information can be a phishing attempt, which is a common cybersecurity threat.
+  utter_reply_cyber_security_complaint_1_2:
+  - text: We advise you not to respond or provide any personal information. Instead, report the email to the IT department or the designated cybersecurity contact.
+  utter_reply_cyber_security_complaint_1_3:
+  - text: They will investigate the matter and provide guidance on how to proceed to ensure the security of your accounts and our company's systems.
+  utter_answer_basic_questions:
+  - text: Please answer some basic questions.
+  utter_ask_date_and_time:
+  - text: Please provide the date and time of the incident.
+  utter_ask_dept:
+  - text: Please provide the name of your department.
+  utter_wait_for_further_instructions:
+  - text: Please wait for further instructions.
+  utter_dont_use_computer:
+  - text: Please don't use your company provided computer until you are cleared to use it.
+  utter_informed_asap:
+  - text: You will be informed about the progress asap.
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

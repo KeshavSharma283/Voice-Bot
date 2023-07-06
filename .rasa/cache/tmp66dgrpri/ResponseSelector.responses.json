@@ -1,0 +1,12 @@
+{
+  "utter_chitchat/ask_life": [
+    {
+      "text": "Life is going goood."
+    }
+  ],
+  "utter_chitchat/ask_weather": [
+    {
+      "text": "Oh , the weather is nice rn."
+    }
+  ]
+}

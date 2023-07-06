@@ -1,0 +1,214 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: thanks
+  examples: |
+    - Thanks for helping me out
+    - Thanks
+    - Thank You
+    - You were a great help
+    - You are so helpful
+    - You are so good
+    - thanks
+- intent: sexual_harassment_complaint_3
+  examples: |
+    - My personal place is constantly being invaded
+    - A collegue of mine is making unwanted physical contact with me
+    - He is invading my personal space
+    - she is harassing me
+    - ryan is making me uncomfortable
+    - ron is touching me inappropriately
+    - harry is disturbing me during work , trying to talk to me
+    - He is being too touchy
+    - He is constantly coming in close contact
+- intent: tell_name
+  examples: |
+    - My name is [ravi](name)
+    - My name is [vishnu](name)
+    - My name is [sejal](name)
+    - My name is [jack](name)
+    - [kshitij](name) is my name
+    - [ishan](name) is my name
+    - [hermione](name)
+    - [arnav](name)
+    - People call me [ranvir](name)
+    - I am [Keshav](name)
+- intent: tell_violater_name
+  examples: |
+    - his name is [julian](violaterName)
+    - her name is [simran](violaterName)
+    - her name is [valentina](violaterName)
+    - his name is [rajesh](name)
+    - [kashish](violaterName)
+    - [archie](violaterName)
+    - [gursimran](violaterName)
+    - [arshit](violaterName) is the one disturbing me
+    - the name is [richard](violaterName)
+    - [kanishk](violaterName) has been harassing me
+- intent: violater_name_not_known
+  examples: |
+    - I don't know his name
+    - idk
+    - I don't know who she is
+    - the name is not known to me
+    - I don't have that information
+    - not known  to me
+    - he never told me his name
+- intent: keep_anonymous
+  examples: |
+    - I don't want my name in the complaint
+    - Don't bring out my name in the open
+    - I request to remain anonymous
+    - I request to not be named
+- intent: sexual_harassment_complaint_new
+  examples: |
+    - I am receiving explicit emails from a fellow employee
+    - I have received some explicit emails from a collegue of mine
+    - A collegue is sending me explicit images on mail
+    - A collegue is sending me explicit videos on mail
+    - [ridhi](violaterName) is sending me dirty images on mail
+    - [varun](violaterName) is asking me to send my explicit pictures to him
+    - [rahul](violaterName) is asking me for my nudes
+    - [dhruv](violaterName) is mailing me explicit stuff
+    - explicit stuff is being mailed to me by a collegue
+- intent: cyber_security_complaint_4
+  examples: |
+    - I clicked on a suspicious link and there is some unusual behaviour on my laptop
+    - On clicking a link , some unusual popups keep coming . What should I do?
+    - I think I have virus on my computer , due to clicking on a suspicious link.
+- intent: cyber_security_complaint_1
+  examples: |
+    - I have gotten an email from a reputable source requesting username and password. I don't know how to respond.
+    - I received an email asking me to give my username and password . It appears to be from a reputable source.
+    - I got a mail asking for some sensitive information. It appears to be from a reputable source.
+- intent: provide_employee_id
+  examples: |
+    - My employee ID is [2021A7PS2170H](employeeId)
+    - The employee ID is [2019AAPS2162P](employeeId)
+    - [2017A1PS9876G](employeeId) is my ID
+    - [2017A1PS9876G](employeeId)
+    - my id is [992772233](employeeId)
+    - my id is [2021A7PS2170H](employeeId)
+- intent: out_of_scope
+  examples: |
+    - Who is the president of India
+    - What is 2+2
+    - How to win america's got talent
+- intent: chitchat/ask_life
+  examples: |
+    - How's life
+    - How is it going?
+    - How's life going right now?
+    - How is life like right now?
+    - is life good?
+    - are you happy in life?
+- intent: chitchat/ask_weather
+  examples: |
+    - What's the weather like today?
+    - Is it sunny?
+    - is it rainy?
+    - Do you mind checking the weather for me
+    - Can you please inform me of the current weather
+- intent: tell_date_and_time
+  examples: |
+    - It happened on [2023-2-16](date) at [2 PM](time)
+    - The date is [2021-9-30](date) and the time is [4 AM](time)
+- intent: tell_dept
+  examples: |
+    - I am from [Finance](dept) department
+    - [Logistics](dept)
+    - I work in [Public Relations](dept)
+    - I work in [R&D](dept)
+    - i work in [finance][{"entity": "dept", "value": "Finance"}, {"entity": "dept", "value": "Finance"}]
+- regex: employeeId
+  examples: |
+    - [0-9]{4}[A][0-9][P][S][0-9]{4}[PGH]
+- lookup: dept
+  examples: |
+    - Finance
+    - Public Relations
+    - Logistics
+    - R&D
+    - Sales
+    - Marketing
