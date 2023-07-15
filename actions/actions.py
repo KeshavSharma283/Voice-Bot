@@ -16,10 +16,10 @@ class SlotStatusAction(Action):
 
         if slot_value is not None:
             # Slot is filled
-            dispatcher.utter_message(f"Your name has been recorded as: {slot_value}")
+            dispatcher.utter_message(f"Your name has been recorded as: {slot_value}.")
         else:
             # Slot is not filled
-            dispatcher.utter_message("Sure your identity is safe with me")
+            dispatcher.utter_message("Sure your identity is safe with me.")
 
         return []
     
@@ -34,7 +34,7 @@ class SlotStatusAction(Action):
 
         if slot_value is not None:
             # Slot is filled
-            dispatcher.utter_message(f"The violater's name has been recorded as: {slot_value}")
+            dispatcher.utter_message(f"The violater's name has been recorded as: {slot_value}.")
         else:
             # Slot is not filled
             dispatcher.utter_message("Try to find the name of the violater and report it.")

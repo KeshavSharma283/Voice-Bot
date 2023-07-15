@@ -35,6 +35,9 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - yes , I asked him to stop
+    - yes , I have asked her to stop
+    - yes , I did
 - intent: deny
   examples: |
     - no

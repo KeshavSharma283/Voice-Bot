@@ -126,7 +126,7 @@ responses:
   utter_acknowledge_dept:
   - text: "The department has been as: {dept}"
   utter_promise_take_actions:
-  - text: I promise you that necessary action will be taken. Don't worry
+  - text: I promise you that necessary action will be taken. Don't worry.
   utter_done_the_right_thing:
   - text: You have done the right thing by coming forward.
   utter_out_of_scope:
@@ -140,7 +140,7 @@ responses:
   utter_reply_sexual_harassment_complaint_new_2:
   - text: We advise you to preserve the note/ save the email as evidence and report the incident to your supervisor or the HR department immediately.
   utter_reply_sexual_harassment_complaint_new_3:
-  - text: The company will initiate an investigation to identify the source of the email
+  - text: The company will initiate an investigation to identify the source of the email.
   utter_ask_employee_id:
   - text: Please provide your employee ID.
   utter_employee_id:

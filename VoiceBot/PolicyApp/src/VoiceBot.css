@@ -1,0 +1,85 @@
+/* VoiceBot.css */
+
+*{
+  margin:0;
+  padding:0;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstroot{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.conversations{
+  margin:5px;
+  padding: 5px;
+  width: 60vw;
+  max-width: 60%;
+}
+
+
+body
+{
+  margin: 30px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  height: 100vh;
+  background-color: pink;
+}
+
+/* Style for the button */
+button {
+  padding: 10px 20px;
+  background-color: deeppink;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: auto;
+  font-family: 'Merriweather', serif;
+  margin-bottom: 30px;
+}
+
+/* Style for the conversation messages */
+p {
+  margin: 5px 0;
+}
+
+/* Style for user messages */
+p:first-child {
+  font-weight: bold;
+  color: #a529da;
+}
+
+/* Style for bot messages */
+p:last-child {
+  color: #c90a96;
+}
+
+
+h1{
+  margin:auto;
+  padding:20px;
+  font-size: 80px;
+  font-family: 'Merriweather', serif;
+  color:darkmagenta;
+}
+

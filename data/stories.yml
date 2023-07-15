@@ -115,6 +115,7 @@ stories:
     entities:
     - name
   - action: utter_acknowledge_name
+  - action: action_pause
   - action: utter_ask_employee_id
   - intent: provide_employee_id
     entities:
@@ -163,6 +164,7 @@ stories:
     entities:
     - name
   - action: utter_acknowledge_name
+  - action: action_pause
   - action: utter_ask_employee_id
   - intent: provide_employee_id
     entities:
